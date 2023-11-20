@@ -1,12 +1,12 @@
-import express, { json } from 'express';
-import cors from 'cors';
-import blogs, { filter } from './api/blogsData.json';
+const express = require('express')
+const app = express()
+const cors = require('cors')
+const blogs = require('./api/blogsData.json')
 const port = process.env.PORT || 5000;
 
-const app = express()
 // middleware
 app.use(cors())
-app.use(json())
+app.use(express.json())
 
 app.get('/', (req, res) => {
   res.send("Blog server is running!")

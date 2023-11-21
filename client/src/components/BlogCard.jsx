@@ -2,9 +2,9 @@
 import { Link } from 'react-router-dom';
 import { FaUser } from 'react-icons/fa'
 
-function BlogCard({ blogs, currentPage, selectedCategory, pageSize }) {
-    const filteredData = blogs.filter((blogs) => !selectedCategory || blogs.category === selectedCategory)
-        .slice((currentPage - 1) * pageSize, currentPage * pageSize);
+function BlogCard({ filteredData }) {
+
+
 
     return (
         <div className='grid md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-8'>

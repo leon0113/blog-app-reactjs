@@ -10,7 +10,6 @@ function BlogPage() {
     const [selectedCategory, setSelectedCategory] = useState(null);
     const [activeCategory, setActiveCategory] = useState(null);
 
-
     const pageSize = 12; //12 blogs in one page
 
     useEffect(() => {
@@ -41,6 +40,11 @@ function BlogPage() {
         setCurrentPage(1);
     }
 
+
+    const totalBlogs = blogs.filter((blogs) => !selectedCategory || blogs.category === selectedCategory);
+
+    const filteredData = totalBlogs.slice((currentPage - 1) * pageSize, currentPage * pageSize);
+
     return (
         <div>
             {/* category section  */}
@@ -50,12 +54,12 @@ function BlogPage() {
 
             {/* blog */}
             <div>
-                <BlogCard blogs={blogs} currentPage={currentPage} selectedCategory={selectedCategory} pageSize={pageSize} />
+                <BlogCard filteredData={filteredData} />
             </div>
 
             {/* pagination */}
             <div>
-                <Pagination handlePagination={handlePagination} currentPage={currentPage} blogs={blogs} pageSize={pageSize} />
+                <Pagination handlePagination={handlePagination} currentPage={currentPage} totalBlogs={totalBlogs} pageSize={pageSize} />
             </div>
         </div>
     )

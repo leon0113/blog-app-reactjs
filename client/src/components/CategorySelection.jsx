@@ -2,7 +2,7 @@
 /* eslint-disable react/prop-types */
 
 function CategorySelection({ handleCategoryChange, selectedCategory, activeCategory }) {
-    const categories = ["Health", "Fintech", "Security", "Apps", "Startups"];
+    const categories = ["Health", "Fintech", "Security", "Apps", "Startups", "AI"];
     return (
         <div className="px-4 lg:space-x-16 flex flex-wrap items-center border-b-2 py-5 text-gray-900 font-semibold">
             <button

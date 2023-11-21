@@ -1,7 +1,7 @@
-/* eslint-disable no-unused-vars */
 import { useEffect, useState } from "react"
 import BlogCard from "./BlogCard";
 import Pagination from "./Pagination";
+import CategorySelection from "./CategorySelection";
 
 
 function BlogPage() {
@@ -44,7 +44,9 @@ function BlogPage() {
     return (
         <div>
             {/* category section  */}
-            <div>Category</div>
+            <div>
+                <CategorySelection handleCategoryChange={handleCategoryChange} activeCategory={activeCategory} selectedCategory={selectedCategory} />
+            </div>
 
             {/* blog */}
             <div>
@@ -52,7 +54,9 @@ function BlogPage() {
             </div>
 
             {/* pagination */}
-            <Pagination handlePagination={handlePagination} currentPage={currentPage} blogs={blogs} pageSize={pageSize} />
+            <div>
+                <Pagination handlePagination={handlePagination} currentPage={currentPage} blogs={blogs} pageSize={pageSize} />
+            </div>
         </div>
     )
 }

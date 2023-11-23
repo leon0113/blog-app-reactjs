@@ -52,11 +52,11 @@ function Navbar() {
                     <a href="https://github.com/leon0113" className=' text-3xl hover:text-blue-500'><FaFacebookF /></a>
                     <a href="https://github.com/leon0113" className=' text-3xl hover:text-blue-500'><FaGithub /></a>
                     <a href="https://github.com/leon0113" className=' text-3xl hover:text-blue-500'><FaTwitter /></a>
-                    <button className='bg-blue-500 py-2 px-6 font-medium rounded hover:bg-white hover:text-blue-500 transition-all duration-200 ease-in'>Log in</button>
+                    <button onClick={openModal} className='bg-blue-500 py-2 px-6 font-medium rounded hover:bg-white hover:text-blue-500 transition-all duration-200 ease-in'>Log in</button>
                 </div>
 
                 {/* Modal  */}
-                <Modal isModalOpen={isModalOpen} openModal={openModal} closeModal={closeModal} />
+                <Modal isModalOpen={isModalOpen} closeModal={closeModal} />
 
                 {/* Mobile menu */}
                 <div className='md:hidden'>

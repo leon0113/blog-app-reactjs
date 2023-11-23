@@ -10,7 +10,7 @@ function Banner() {
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque nemo numquam atque rerum tempora consequatur!</p>
                 <div>
                     <Link to='/contact' className="font-medium
-                     bg-white p-2 rounded-md text-black hover:bg-gray-900 hover:text-white inline-flex items-center gap-3">Learn More <FaArrowRight /></Link>
+                      p-2 rounded-md text-white hover:bg-white hover:text-black inline-flex items-center gap-3">Learn More <FaArrowRight /></Link>
                 </div>
             </div>
         </div>

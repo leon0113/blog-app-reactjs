@@ -2,6 +2,7 @@ import { useEffect, useState } from "react"
 import BlogCard from "./BlogCard";
 import Pagination from "./Pagination";
 import CategorySelection from "./CategorySelection";
+import SideBar from './Sidebar';
 
 
 function BlogPage() {
@@ -53,8 +54,14 @@ function BlogPage() {
             </div>
 
             {/* blog */}
-            <div>
+            <div className="flex flex-col lg:flex-row gap-12">
+                {/* Blog cards  */}
                 <BlogCard filteredData={filteredData} />
+
+                {/* side bar  */}
+                <div>
+                    <SideBar />
+                </div>
             </div>
 
             {/* pagination */}

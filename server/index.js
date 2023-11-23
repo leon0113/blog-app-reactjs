@@ -18,7 +18,7 @@ app.get('/blogs', (req, res) => {
 app.get('/blogs/:id', (req, res) => {
   const id = parseInt(req.params.id);
   // console.log(id)
-  const blog = filter(b => b.id === id);
+  const blog = blogs.filter(b => b.id === id);
   // console.log(blog)
   res.send(blog)
 })
